@@ -47,6 +47,42 @@ def main():
 	plot_all_performances(num_episodes, [sarsa_avg_rewards, sarsamax_avg_rewards, exp_sarsa_avg_rewards], 
 		title="Comparison of Temporal Difference control methods")
 
+def render():
+	env = gym.make('Taxi-v2')
+	num_episodes = 10000
+
+	Q = defaultdict(lambda: np.zeros(6))
+	eps_decay = 0.99
+	eps_min = 0.005
+
+	alpha = 0.1
+	gamma = 0.9
+
+	state = env.reset()
+	env.render()
+	epsilon = 1.0
+	for num_episode in range(num_episodes):
+		print("num_episode: ", num_episode)
+		epsilon = max(epsilon * 0.99, 0.05)
+		for t in range(1000):
+			policy_s = np.ones(6) * (epsilon / 6)
+			policy_s[np.argmax(Q[state])] = 1 - epsilon + (epsilon / 6)
+			# action = env.action_space.sample()
+			action = np.random.choice(np.arange(6), p=policy_s)
+			next_state, reward, done, _ = env.step(action)
+			env.render()
+			sys.stdout.flush()
+			time.sleep(0.1)
+			Q[state][action] = Q[state][action] + alpha * (reward + (gamma * np.max(Q[next_state])) - Q[state][action])
+			state = next_state
+
+			if done:
+				# print('reward: ', reward)
+				break
+
+	env.close()
+
 
 if __name__ == '__main__':
-	main()
+	# main()
+	render()

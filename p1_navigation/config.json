@@ -1,0 +1,46 @@
+{
+	"exp_name": "DQN_exp", 
+	"cuda": false, 
+	"gpu": 0, 
+
+	"optimizer": {
+		"optimizer_type": "Adam", 
+		"optimizer_params": {
+			"lr": 0.0005,
+			"beta_1": 0.9,
+			"beta_2": 0.999, 
+			"epsilon": 1e-7,
+			"decay": 0
+		}
+	},
+
+	"GLIE": { /*Greedy in the Limit with Infite Exploration parameters*/
+		"eps_start": 1.0, 
+		"eps_end": 0.01, 
+		"eps_decay": 0.99
+	},
+
+	"DQN": {
+		"gamma": 0.99, /*discount factor*/
+		"tau": 1e-3, /*for soft update of target parameters*/
+		"update_every": 4, /*how often to update the network*/
+		"buffer_size": 1e5 /*replay buffer size*/
+	},
+
+	"architecture": {
+		"hidden_layers_units": [100, 50], 
+		"use_dropout": true,
+		"dropout_proba": 0.5
+	},
+
+	"trainer": {
+		"num_episodes": 1000, 
+		"batch_size": 32, 
+		"max_timesteps_per_ep": 500, 
+		"save_dir": "./saved", 
+		"save_trained_name": "model_trained", 
+		"save_freq": 100, 
+		"verbose": 1
+	}
+
+}

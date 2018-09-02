@@ -5,41 +5,40 @@
 
 	"optimizer": {
 		"optimizer_type": "Adam", 
+		"betas": [0.9, 0.999],
 		"optimizer_params": {
 			"lr": 0.0005,
-			"beta_1": 0.9,
-			"beta_2": 0.999, 
-			"epsilon": 1e-7,
-			"decay": 0
+			"eps": 1e-7,
+			"weight_decay": 0
 		}
 	},
 
-	"GLIE": { /*Greedy in the Limit with Infite Exploration parameters*/
+	"GLIE": {    
 		"eps_start": 1.0, 
-		"eps_end": 0.01, 
-		"eps_decay": 0.99
+		"eps_end": 0.005, 
+		"eps_decay": 0.999
 	},
 
 	"DQN": {
-		"gamma": 0.99, /*discount factor*/
-		"tau": 1e-3, /*for soft update of target parameters*/
-		"update_every": 4, /*how often to update the network*/
-		"buffer_size": 1e5 /*replay buffer size*/
+		"gamma": 0.99, 
+		"tau": 1e-3, 
+		"update_every": 4, 
+		"buffer_size": 1e5 
 	},
 
 	"architecture": {
-		"hidden_layers_units": [100, 50], 
-		"use_dropout": true,
+		"hidden_layers_units": [500, 200, 100], 
+		"use_dropout": false,
 		"dropout_proba": 0.5
 	},
 
 	"trainer": {
-		"num_episodes": 1000, 
+		"num_episodes": 2000, 
 		"batch_size": 32, 
-		"max_timesteps_per_ep": 500, 
-		"save_dir": "./saved", 
+		"max_timesteps_per_ep": 1000, 
+		"save_dir": "./saved/", 
 		"save_trained_name": "model_trained", 
-		"save_freq": 100, 
+		"save_freq": 500, 
 		"verbose": 1
 	}
 

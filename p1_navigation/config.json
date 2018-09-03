@@ -23,7 +23,7 @@
 		"gamma": 0.99, 
 		"tau": 1e-3, 
 		"update_every": 4, 
-		"buffer_size": 1e5 
+		"buffer_size": 5e4 
 	},
 
 	"architecture": {

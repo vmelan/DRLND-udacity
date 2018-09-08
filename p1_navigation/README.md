@@ -23,10 +23,12 @@ agent must get an average score of +13 over 100 consecutive episodes.
 
 ## Files
 - `Navigation.ipynb`: Notebook used to control and train the agent 
+- `main.py`: Main script used to control and train the agent for experimentation
 - `dqn_agent.py`: Create an Agent class that interacts with and learns from the environment 
 - `model.py`: Q-network class used to map state to action values 
 - `config.json`: Configuration file to store variables and paths
 - `utils.py`: Helper functions 
+- `report.pdf`: Technical report 
 
 ## Dependencies
 To be able to run this code, you will need an environment with Python 3 and 

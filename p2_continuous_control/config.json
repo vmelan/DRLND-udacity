@@ -1,6 +1,6 @@
 {
 	"exp_name": "DDPG_exp", 
-	"cuda": false, 
+	"cuda": true, 
 	"gpu": 0,
 
 	"optimizer_actor": {
@@ -9,7 +9,7 @@
 		"optimizer_params": {
 			"lr": 1e-4, 
 			"eps": 1e-7, 
-			"weight_decay": 10e-2
+			"weight_decay": 0 
 		}
 	},
 
@@ -17,7 +17,7 @@
 		"optimizer_type": "Adam", 
 		"betas": [0.9, 0.999], 
 		"optimizer_params": {
-			"lr": 1e-3, 
+			"lr": 1e-4, 
 			"eps": 1e-7, 
 			"weight_decay": 0
 		}
@@ -30,13 +30,13 @@
 	},
 
 	"architecture": {
-		"fc1_units": 400, 
-		"fc2_units": 300
+		"fc1_units": 250, 
+		"fc2_units": 100
 	},
 
 	"trainer" : {
-		"num_episodes": 400, 
-		"batch_size": 64, 
+		"num_episodes": 500, 
+		"batch_size": 128, 
 		"save_dir": "./saved/", 
 		"save_freq": 200
 	}

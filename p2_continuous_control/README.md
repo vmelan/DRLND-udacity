@@ -26,7 +26,7 @@ episodes.
 ## Files 
 - `Navigation.ipynb`: Notebook used to control and train the agent 
 - `ddpg_agent.py`: Create an Agent class that interacts with and learns from the environment 
-- `model.py`: Actor and Critic classes used to map state to action values 
+- `model.py`: Actor and Critic classes  
 - `config.json`: Configuration file to store variables and paths
 - `utils.py`: Helper functions 
 - `report.pdf`: Technical report

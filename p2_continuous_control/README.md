@@ -24,7 +24,7 @@ the environment, the agent must get an average score of +30 over 100 consecutive
 episodes.
 
 ## Files 
-- `Navigation.ipynb`: Notebook used to control and train the agent 
+- `Continuous_Control.ipynb`: Notebook used to control and train the agent 
 - `ddpg_agent.py`: Create an Agent class that interacts with and learns from the environment 
 - `model.py`: Actor and Critic classes  
 - `config.json`: Configuration file to store variables and paths
@@ -46,5 +46,5 @@ the environment that matches your operating system:
 - Windows : [link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Windows_x86_64.zip)
 
 ## Running
-Run the cells in the notebook `Navigation.ipynb` to train an agent that solves our required
+Run the cells in the notebook `Continuous_Control.ipynb` to train an agent that solves our required
 task of moving the double-jointed arm.

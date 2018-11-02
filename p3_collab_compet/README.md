@@ -1,7 +1,7 @@
-# Project : Continuous Control 
+# Project : Collaboration and Competition 
 
 ## Description 
-For this project, we train a double-jointed arm agent to follow a target location.
+For this project, we train a pair of agents to play tennis.
 
 <p align="center">
 	<img src="images/tennis_gif.gif" width=50% height=50%>

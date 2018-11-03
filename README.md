@@ -6,6 +6,7 @@ This repository contains project files for Udacity's Deep Reinforcement Learning
 
 ### Reinforcement Learning
 >[P0_Taxi](https://github.com/vmelan/DRLND-udacity/tree/master/p0_taxi-v2)
+
 For this project, we use OpenAI Gym Taxi-v2 environment to design an algorithm to teach a taxi agent to navigate a small gridworld using Reinforcement Learning methods.
 
 ### Navigation
